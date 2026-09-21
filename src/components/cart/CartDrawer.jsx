@@ -91,11 +91,6 @@ const CartDrawer = () => {
                     >
                       {item.name}
                     </Link>
-                    {item.variantName && (
-                      <p className="text-sm text-gray-600 mt-1">
-                        {item.variantName}
-                      </p>
-                    )}
                     <p className="text-lg font-bold text-primary mt-2">
                       ${item.price.toFixed(2)}
                     </p>

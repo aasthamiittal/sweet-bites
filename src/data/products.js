@@ -15,9 +15,7 @@ export const products = [
     ],
     description: 'Bursting with fruity flavors! Our Rainbow Fruit Jellies are made with real fruit juice and come in a variety of delicious flavors including strawberry, orange, lemon, grape, and more.',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 35.00, originalPrice: 45.00 },
-      { id: 2, name: '16 oz Bag', price: 62.00, originalPrice: 79.99 },
-      { id: 3, name: '32 oz Family Pack', price: 110.00, originalPrice: 145.00 },
+      { id: 1, name: 'Standard', price: 35.00, originalPrice: 45.00 },
     ],
     ingredients: 'Corn syrup, Sugar, Fruit juice concentrate, Gelatin, Citric acid, Natural flavors, Colors (from natural sources)',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 90 | Total Fat: 0g | Sodium: 10mg | Total Carbohydrate: 22g | Sugars: 16g | Protein: 1g',
@@ -41,9 +39,7 @@ export const products = [
     ],
     description: 'Get ready for a flavor explosion! These sour gummy worms pack the perfect punch of sweet and tangy. Each worm features two delicious flavors twisted together.',
     variants: [
-      { id: 1, name: '6 oz Bag', price: 39.00, originalPrice: 52.00 },
-      { id: 2, name: '12 oz Bag', price: 70.00, originalPrice: 95.00 },
-      { id: 3, name: '24 oz Party Pack', price: 130.00, originalPrice: 175.00 },
+      { id: 1, name: 'Standard', price: 39.00, originalPrice: 52.00 },
     ],
     ingredients: 'Corn syrup, Sugar, Gelatin, Citric acid, Lactic acid, Natural and artificial flavors, Colors',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 100 | Total Fat: 0g | Sodium: 15mg | Total Carbohydrate: 24g | Sugars: 18g | Protein: 2g',
@@ -67,8 +63,7 @@ export const products = [
     ],
     description: 'Transport yourself to a tropical paradise with our Mango Tango Jellies! Made with real mango puree, these soft, chewy jellies deliver an authentic mango taste.',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 39.00, originalPrice: 52.00 },
-      { id: 2, name: '16 oz Bag', price: 70.00, originalPrice: 95.00 },
+      { id: 1, name: 'Standard', price: 39.00, originalPrice: 52.00 },
     ],
     ingredients: 'Mango puree, Sugar, Corn syrup, Gelatin, Citric acid, Natural mango flavor, Turmeric (for color)',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 95 | Total Fat: 0g | Sodium: 5mg | Total Carbohydrate: 23g | Sugars: 17g | Protein: 1g',
@@ -92,9 +87,7 @@ export const products = [
     ],
     description: 'Indulge in the perfect combination of rich Belgian chocolate and smooth, buttery caramel. Each piece is a luxurious treat for your taste buds.',
     variants: [
-      { id: 1, name: '8 oz Box', price: 60.00, originalPrice: 80.00 },
-      { id: 2, name: '16 oz Box', price: 110.00, originalPrice: 145.00 },
-      { id: 3, name: '24 oz Premium Box', price: 160.00, originalPrice: 210.00 },
+      { id: 1, name: 'Standard', price: 60.00, originalPrice: 80.00 },
     ],
     ingredients: 'Belgian chocolate (cocoa mass, sugar, cocoa butter), Cream, Butter, Corn syrup, Sugar, Vanilla extract, Sea salt',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 140 | Total Fat: 8g | Sodium: 35mg | Total Carbohydrate: 17g | Sugars: 14g | Protein: 2g',
@@ -118,8 +111,7 @@ export const products = [
     ],
     description: 'Sweet, juicy, and peachy perfect! Our Peach Rings are coated in tangy sugar crystals for the ultimate sweet and sour combination.',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 41.00, originalPrice: 55.00 },
-      { id: 2, name: '16 oz Bag', price: 75.00, originalPrice: 100.00 },
+      { id: 1, name: 'Standard', price: 41.00, originalPrice: 55.00 },
     ],
     ingredients: 'Sugar, Corn syrup, Gelatin, Citric acid, Natural peach flavor, Colors (from fruit and vegetable juice)',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 110 | Total Fat: 0g | Sodium: 10mg | Total Carbohydrate: 26g | Sugars: 20g | Protein: 2g',
@@ -143,8 +135,7 @@ export const products = [
     ],
     description: 'A medley of berry goodness! Featuring strawberry, blueberry, raspberry, and blackberry flavors, all made with real fruit juice.',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 41.00, originalPrice: 55.00 },
-      { id: 2, name: '16 oz Bag', price: 75.00, originalPrice: 100.00 },
+      { id: 1, name: 'Standard', price: 41.00, originalPrice: 55.00 },
     ],
     ingredients: 'Mixed berry juice concentrate, Sugar, Corn syrup, Gelatin, Citric acid, Natural flavors, Vegetable juice (for color)',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 92 | Total Fat: 0g | Sodium: 8mg | Total Carbohydrate: 22g | Sugars: 17g | Protein: 1g',
@@ -168,8 +159,7 @@ export const products = [
     ],
     description: 'Classic cola flavor in a fun bottle shape! These gummies taste just like your favorite fizzy drink but in chewy candy form.',
     variants: [
-      { id: 1, name: '6 oz Bag', price: 39.00, originalPrice: 52.00 },
-      { id: 2, name: '12 oz Bag', price: 70.00, originalPrice: 95.00 },
+      { id: 1, name: 'Standard', price: 39.00, originalPrice: 52.00 },
     ],
     ingredients: 'Sugar, Corn syrup, Gelatin, Cola flavor, Citric acid, Caramel color',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 105 | Total Fat: 0g | Sodium: 12mg | Total Carbohydrate: 25g | Sugars: 19g | Protein: 2g',
@@ -193,8 +183,7 @@ export const products = [
     ],
     description: 'Summer in every bite! Our Watermelon Slices look and taste just like the real thing, complete with seeds made from chocolate chips.',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 50.00, originalPrice: 67.00 },
-      { id: 2, name: '16 oz Bag', price: 90.00, originalPrice: 120.00 },
+      { id: 1, name: 'Standard', price: 50.00, originalPrice: 67.00 },
     ],
     ingredients: 'Sugar, Corn syrup, Gelatin, Watermelon flavor, Citric acid, Colors (from vegetable sources), Mini chocolate chips',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 98 | Total Fat: 1g | Sodium: 10mg | Total Carbohydrate: 23g | Sugars: 18g | Protein: 2g',
@@ -218,9 +207,7 @@ export const products = [
     ],
     description: 'A luxurious collection of handcrafted truffles featuring classic flavors like dark chocolate, hazelnut, raspberry, and sea salt caramel.',
     variants: [
-      { id: 1, name: '12-Piece Box', price: 60.00, originalPrice: 80.00 },
-      { id: 2, name: '24-Piece Box', price: 110.00, originalPrice: 145.00 },
-      { id: 3, name: '48-Piece Gift Box', price: 200.00, originalPrice: 265.00 },
+      { id: 1, name: 'Standard', price: 60.00, originalPrice: 80.00 },
     ],
     ingredients: 'Belgian chocolate, Cream, Butter, Sugar, Natural flavors, Sea salt, Hazelnuts, Raspberry puree',
     nutrition: 'Serving size: 1 truffle (21g) | Calories: 130 | Total Fat: 9g | Sodium: 25mg | Total Carbohydrate: 12g | Sugars: 10g | Protein: 2g',
@@ -244,8 +231,7 @@ export const products = [
     ],
     description: 'Escape to the tropics with this exotic blend of pineapple, coconut, passion fruit, and papaya jellies. Each piece is a mini vacation!',
     variants: [
-      { id: 1, name: '8 oz Bag', price: 35.00, originalPrice: 45.00 },
-      { id: 2, name: '16 oz Bag', price: 62.00, originalPrice: 79.99 },
+      { id: 1, name: 'Standard', price: 35.00, originalPrice: 45.00 },
     ],
     ingredients: 'Mixed tropical fruit purees, Sugar, Corn syrup, Gelatin, Citric acid, Natural flavors, Colors (from natural sources)',
     nutrition: 'Serving size: 1 oz (28g) | Calories: 94 | Total Fat: 0g | Sodium: 6mg | Total Carbohydrate: 23g | Sugars: 17g | Protein: 1g',

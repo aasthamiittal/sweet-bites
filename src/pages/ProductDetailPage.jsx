@@ -168,31 +168,6 @@ const ProductDetailPage = () => {
               {product.description}
             </p>
 
-            {/* Variant Selector */}
-            <div className="mb-6">
-              <label className="block text-sm font-bold text-gray-900 mb-3">
-                Select Size:
-              </label>
-              <div className="grid grid-cols-3 gap-3">
-                {product.variants.map((variant, index) => (
-                  <button
-                    key={variant.id}
-                    onClick={() => setSelectedVariant(index)}
-                    className={`px-4 py-3 border-2 rounded-lg font-semibold transition-all ${
-                      selectedVariant === index
-                        ? 'border-primary bg-primary text-white'
-                        : 'border-gray-300 hover:border-primary'
-                    }`}
-                  >
-                    <div className="text-sm">{variant.name}</div>
-                    <div className="text-xs opacity-75 mt-1">
-                      ${variant.price.toFixed(2)}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Quantity Selector */}
             <div className="mb-8">
               <label className="block text-sm font-bold text-gray-900 mb-3">

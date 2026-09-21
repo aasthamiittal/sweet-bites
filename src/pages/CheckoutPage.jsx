@@ -378,9 +378,6 @@ const CheckoutPage = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold text-gray-900 truncate">{item.name}</h3>
-                      {item.variantName && (
-                        <p className="text-sm text-gray-600">{item.variantName}</p>
-                      )}
                       <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
                     </div>
                     <div className="text-right">

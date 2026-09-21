@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
+import { Star, Heart, ShoppingCart, Minus, Plus } from 'lucide-react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { useCart } from '../../context/CartContext';
@@ -8,12 +8,35 @@ import { useCart } from '../../context/CartContext';
 const ProductCard = ({ product }) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { addToCart, openCart } = useCart();
+  const { addToCart, openCart, cartItems, updateQuantity } = useCart();
+
+  // Check if product is in cart
+  const cartItem = cartItems.find((item) => item.id === product.id);
+  const isInCart = !!cartItem;
+  const currentQuantity = cartItem?.quantity || 0;
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     addToCart(product);
     openCart();
+  };
+
+  const handleIncreaseQuantity = (e) => {
+    e.preventDefault();
+    if (isInCart) {
+      updateQuantity(product.id, cartItem.variantId, currentQuantity + 1);
+    } else {
+      addToCart(product);
+    }
+  };
+
+  const handleDecreaseQuantity = (e) => {
+    e.preventDefault();
+    if (currentQuantity > 1) {
+      updateQuantity(product.id, cartItem.variantId, currentQuantity - 1);
+    } else {
+      updateQuantity(product.id, cartItem.variantId, 0); // This will remove the item
+    }
   };
 
   const handleWishlistToggle = (e) => {
@@ -102,15 +125,35 @@ const ProductCard = ({ product }) => {
           )}
         </div>
 
-        {/* Add to Cart Button */}
-        <Button
-          onClick={handleAddToCart}
-          fullWidth
-          className="group-hover:shadow-lg"
-        >
-          <ShoppingCart size={18} />
-          Add to Cart
-        </Button>
+        {/* Add to Cart Button or Quantity Controls */}
+        {isInCart ? (
+          <div className="flex items-center border-2 border-primary rounded-lg overflow-hidden">
+            <button
+              onClick={handleDecreaseQuantity}
+              className="flex-1 bg-white hover:bg-primary-lighter text-primary font-bold py-3 px-4 transition-colors touch-manipulation"
+            >
+              <Minus size={18} className="mx-auto" />
+            </button>
+            <div className="flex-1 bg-primary text-white font-bold py-3 px-4 text-center">
+              {currentQuantity}
+            </div>
+            <button
+              onClick={handleIncreaseQuantity}
+              className="flex-1 bg-white hover:bg-primary-lighter text-primary font-bold py-3 px-4 transition-colors touch-manipulation"
+            >
+              <Plus size={18} className="mx-auto" />
+            </button>
+          </div>
+        ) : (
+          <Button
+            onClick={handleAddToCart}
+            fullWidth
+            className="group-hover:shadow-lg"
+          >
+            <ShoppingCart size={18} />
+            Add to Cart
+          </Button>
+        )}
       </div>
     </Link>
   );

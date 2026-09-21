@@ -40,32 +40,9 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border-2 border-gray-100 hover:border-primary transition-all hover:shadow-lg">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
-                    <Phone size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
-                    <p className="text-gray-600">1-800-SWEET-BITES</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Mon-Fri, 9AM - 6PM EST
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border-2 border-gray-100 hover:border-primary transition-all hover:shadow-lg">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
-                    <MapPin size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Visit Us</h3>
-                    <p className="text-gray-600">
-                      123 Candy Lane<br />
-                      Sweet City, SC 12345<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
+
+
 
                 <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl border-2 border-gray-100 hover:border-primary transition-all hover:shadow-lg">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
@@ -178,11 +155,7 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-0">
-        <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-          <p className="text-gray-500 text-lg">Map Location (Google Maps Integration)</p>
-        </div>
-      </section>
+  
     </div>
   );
 };

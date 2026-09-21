@@ -46,35 +46,7 @@ const Footer = () => {
               Bringing joy one sweet bite at a time. Premium quality candies and
               treats for every occasion.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-lg hover:bg-primary-dark transition-colors"
-                aria-label="Facebook"
-              >
-                <Share2 size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-lg hover:bg-primary-dark transition-colors"
-                aria-label="Instagram"
-              >
-                <MessageCircle size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-lg hover:bg-primary-dark transition-colors"
-                aria-label="Twitter"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
+
           </div>
 
           {/* Shop */}
@@ -148,26 +120,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/shipping"
+                  to="/account"
                   className="text-gray-600 hover:text-primary transition-colors"
                 >
-                  Shipping Info
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/returns"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Returns & Refunds
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/track-order"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Track Your Order
+                  My Account
                 </Link>
               </li>
             </ul>
@@ -195,26 +151,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/careers"
+                  to="/contact"
                   className="text-gray-600 hover:text-primary transition-colors"
                 >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/privacy"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/terms"
-                  className="text-gray-600 hover:text-primary transition-colors"
-                >
-                  Terms of Service
+                  Get in Touch
                 </Link>
               </li>
             </ul>
