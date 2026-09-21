@@ -10,8 +10,8 @@ export const products = [
     rating: 4.8,
     reviewCount: 156,
     images: [
-      '/src/assets/products/jelly.png',
-      '/src/assets/products/jelly.png',
+      '/assets/products/jelly.png',
+      '/assets/products/jelly.png',
     ],
     description: 'Bursting with fruity flavors! Our Rainbow Fruit Jellies are made with real fruit juice and come in a variety of delicious flavors including strawberry, orange, lemon, grape, and more.',
     variants: [
@@ -36,8 +36,8 @@ export const products = [
     rating: 4.9,
     reviewCount: 243,
     images: [
-      '/src/assets/products/sour-gummy-worms.png',
-      '/src/assets/products/sour-gummy-worms.png',
+      '/assets/products/sour-gummy-worms.png',
+      '/assets/products/sour-gummy-worms.png',
     ],
     description: 'Get ready for a flavor explosion! These sour gummy worms pack the perfect punch of sweet and tangy. Each worm features two delicious flavors twisted together.',
     variants: [
@@ -62,8 +62,8 @@ export const products = [
     rating: 4.7,
     reviewCount: 89,
     images: [
-      '/src/assets/products/Mango Tango Jellies.png',
-      '/src/assets/products/Mango Tango Jellies.png',
+      '/assets/products/Mango Tango Jellies.png',
+      '/assets/products/Mango Tango Jellies.png',
     ],
     description: 'Transport yourself to a tropical paradise with our Mango Tango Jellies! Made with real mango puree, these soft, chewy jellies deliver an authentic mango taste.',
     variants: [
@@ -87,8 +87,8 @@ export const products = [
     rating: 5.0,
     reviewCount: 201,
     images: [
-      '/src/assets/products/caramel-delight-box.png',
-      '/src/assets/products/caramel-delight-box.png',
+      '/assets/products/caramel-delight-box.png',
+      '/assets/products/caramel-delight-box.png',
     ],
     description: 'Indulge in the perfect combination of rich Belgian chocolate and smooth, buttery caramel. Each piece is a luxurious treat for your taste buds.',
     variants: [
@@ -113,8 +113,8 @@ export const products = [
     rating: 4.8,
     reviewCount: 167,
     images: [
-      '/src/assets/products/peach-rings.png',
-      '/src/assets/products/peach-rings.png',
+      '/assets/products/peach-rings.png',
+      '/assets/products/peach-rings.png',
     ],
     description: 'Sweet, juicy, and peachy perfect! Our Peach Rings are coated in tangy sugar crystals for the ultimate sweet and sour combination.',
     variants: [
@@ -138,8 +138,8 @@ export const products = [
     rating: 4.7,
     reviewCount: 134,
     images: [
-      '/src/assets/products/Mixed Berry Bliss.png',
-      '/src/assets/products/Mixed Berry Bliss.png',
+      '/assets/products/Mixed Berry Bliss.png',
+      '/assets/products/Mixed Berry Bliss.png',
     ],
     description: 'A medley of berry goodness! Featuring strawberry, blueberry, raspberry, and blackberry flavors, all made with real fruit juice.',
     variants: [
@@ -163,8 +163,8 @@ export const products = [
     rating: 4.5,
     reviewCount: 98,
     images: [
-      '/src/assets/products/cola-bottles.png',
-      '/src/assets/products/cola-bottles.png',
+      '/assets/products/cola-bottles.png',
+      '/assets/products/cola-bottles.png',
     ],
     description: 'Classic cola flavor in a fun bottle shape! These gummies taste just like your favorite fizzy drink but in chewy candy form.',
     variants: [
@@ -188,8 +188,8 @@ export const products = [
     rating: 4.9,
     reviewCount: 189,
     images: [
-      '/src/assets/products/watermelon-slices.png',
-      '/src/assets/products/watermelon-slices.png',
+      '/assets/products/watermelon-slices.png',
+      '/assets/products/watermelon-slices.png',
     ],
     description: 'Summer in every bite! Our Watermelon Slices look and taste just like the real thing, complete with seeds made from chocolate chips.',
     variants: [
@@ -213,8 +213,8 @@ export const products = [
     rating: 5.0,
     reviewCount: 276,
     images: [
-      '/src/assets/products/Assorted-truffle-box.png',
-      '/src/assets/products/Assorted-truffle-box.png',
+      '/assets/products/Assorted-truffle-box.png',
+      '/assets/products/Assorted-truffle-box.png',
     ],
     description: 'A luxurious collection of handcrafted truffles featuring classic flavors like dark chocolate, hazelnut, raspberry, and sea salt caramel.',
     variants: [
@@ -239,8 +239,8 @@ export const products = [
     rating: 4.8,
     reviewCount: 145,
     images: [
-      '/src/assets/products/tropical-paradise.png',
-      '/src/assets/products/tropical-paradise.png',
+      '/assets/products/tropical-paradise.png',
+      '/assets/products/tropical-paradise.png',
     ],
     description: 'Escape to the tropics with this exotic blend of pineapple, coconut, passion fruit, and papaya jellies. Each piece is a mini vacation!',
     variants: [
@@ -261,34 +261,34 @@ export const categories = [
     name: 'Jellies',
     slug: 'jellies',
     description: 'Soft, chewy, and bursting with real fruit flavors',
-    image: '/src/assets/products/jelly.png',
+    image: '/assets/products/jelly.png',
   },
   {
     id: 2,
     name: 'Gummies',
     slug: 'gummies',
     description: 'Fun shapes and delicious flavors in every bite',
-    image: '/src/assets/products/sour-gummy-worms.png',
+    image: '/assets/products/sour-gummy-worms.png',
   },
   {
     id: 3,
     name: 'Chocolates',
     slug: 'chocolates',
     description: 'Premium Belgian chocolate creations',
-    image: '/src/assets/products/Assorted-truffle-box.png',
+    image: '/assets/products/Assorted-truffle-box.png',
   },
   {
     id: 5,
     name: 'Gift Boxes',
     slug: 'gift-boxes',
     description: 'Perfectly curated treats for any occasion',
-    image: '/src/assets/products/caramel-delight-box.png',
+    image: '/assets/products/caramel-delight-box.png',
   },
   {
     id: 6,
     name: 'New Arrivals',
     slug: 'new-arrivals',
     description: 'Discover our latest sweet creations',
-    image: '/src/assets/products/Mixed Berry Bliss.png',
+    image: '/assets/products/Mixed Berry Bliss.png',
   },
 ];

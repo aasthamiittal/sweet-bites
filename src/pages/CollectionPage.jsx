@@ -99,7 +99,7 @@ const CollectionPage = () => {
       {/* Page Header */}
       <div className="bg-primary-lighter py-12 md:py-16">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-4">
             {pageTitle}
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -242,10 +242,10 @@ const CollectionPage = () => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
             onClick={() => setIsFilterOpen(false)}
           />
-          <div className="fixed left-0 top-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 lg:hidden animate-slide-in-left overflow-y-auto">
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-2xl font-black text-primary">Filters</h3>
+          <div className="fixed left-0 top-0 h-full w-full max-w-xs sm:max-w-sm bg-white shadow-2xl z-50 lg:hidden animate-slide-in-left overflow-y-auto">
+            <div className="p-4 sm:p-8">
+              <div className="flex items-center justify-between mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl font-black text-primary">Filters</h3>
                 <button
                   onClick={() => setIsFilterOpen(false)}
                   className="w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full"

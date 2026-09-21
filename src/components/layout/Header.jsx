@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-30 bg-white">
       {/* Main Header */}
-      <div className="border-b border-border">
+      <div className="border-b border-border shadow-sm">
         <div className="container-custom">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -33,12 +33,12 @@ const Header = () => {
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center hover:opacity-90 transition-opacity"
+              className="flex items-center hover:opacity-90 transition-opacity absolute left-1/2 -translate-x-1/2 lg:relative lg:left-auto lg:translate-x-0"
             >
               <img
                 src={logo}
                 alt="Sweet Bites - Little Bites, Big Happiness"
-                className="h-12 lg:h-16 w-auto"
+                className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto"
               />
             </Link>
 
@@ -56,31 +56,31 @@ const Header = () => {
             </nav>
 
             {/* Right Icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               {/* Search */}
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="w-10 h-10 flex items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors"
+                className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors touch-manipulation"
               >
-                <Search size={20} />
+                <Search size={20} className="sm:w-5 sm:h-5" />
               </button>
 
               {/* Account */}
               <Link
                 to="/account"
-                className="hidden md:flex w-10 h-10 items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors"
+                className="hidden md:flex w-10 h-10 sm:w-11 sm:h-11 items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors touch-manipulation"
               >
-                <User size={20} />
+                <User size={20} className="sm:w-5 sm:h-5" />
               </Link>
 
               {/* Cart */}
               <button
                 onClick={openCart}
-                className="relative w-10 h-10 flex items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors"
+                className="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center text-primary hover:bg-primary-lighter rounded-lg transition-colors touch-manipulation"
               >
-                <ShoppingCart size={20} />
+                <ShoppingCart size={20} className="sm:w-5 sm:h-5" />
                 {getCartCount() > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">
                     {getCartCount()}
                   </span>
                 )}
@@ -112,15 +112,15 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-b border-border bg-white animate-slide-in-left">
-          <nav className="container-custom py-6">
-            <div className="flex flex-col gap-4">
+        <div className="lg:hidden border-b border-border bg-white shadow-lg animate-slide-in-left">
+          <nav className="container-custom py-4">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors py-2"
+                  className="text-base font-semibold text-gray-900 hover:text-white hover:bg-primary transition-all py-3 px-4 rounded-lg touch-manipulation"
                 >
                   {link.name}
                 </Link>
@@ -128,9 +128,9 @@ const Header = () => {
               <Link
                 to="/account"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors py-2 flex items-center gap-2"
+                className="text-base font-semibold text-gray-900 hover:text-white hover:bg-primary transition-all py-3 px-4 rounded-lg flex items-center gap-2 touch-manipulation"
               >
-                <User size={20} />
+                <User size={18} />
                 Account
               </Link>
             </div>

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import Toast from '../components/ui/Toast';
 
 const CartContext = createContext();
 
@@ -16,6 +17,7 @@ export const CartProvider = ({ children }) => {
     return savedCart ? JSON.parse(savedCart) : [];
   });
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('sweetBitesCart', JSON.stringify(cartItems));
@@ -29,6 +31,7 @@ export const CartProvider = ({ children }) => {
       );
 
       if (existingItem) {
+        setToast({ message: `Updated ${product.name} quantity in cart!`, type: 'success' });
         return prevItems.map((item) =>
           item.id === product.id && item.variantId === variantId
             ? { ...item, quantity: item.quantity + quantity }
@@ -38,6 +41,8 @@ export const CartProvider = ({ children }) => {
 
       const price = variant ? variant.price : product.price;
       const variantName = variant ? variant.name : product.variants?.[0]?.name || null;
+
+      setToast({ message: `${product.name} added to cart!`, type: 'success' });
 
       return [
         ...prevItems,
@@ -106,5 +111,16 @@ export const CartProvider = ({ children }) => {
     closeCart,
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider value={value}>
+      {children}
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
+    </CartContext.Provider>
+  );
 };

@@ -11,8 +11,8 @@ const Footer = () => {
       {/* Newsletter Section */}
       <div id="newsletter" className="bg-primary text-white py-20">
         <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4">Join the Sweet Life!</h3>
+          <div className="max-w-2xl mx-auto text-center px-4">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Join the Sweet Life!</h3>
             <p className="text-lg mb-8">
               Subscribe to get special offers, free giveaways, and exclusive deals.
             </p>

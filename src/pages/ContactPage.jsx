@@ -7,7 +7,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="bg-primary-lighter py-20">
         <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-black text-primary mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6">
             Get In Touch
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-primary mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-8 sm:mb-10">
                 Contact Information
               </h2>
 
@@ -93,8 +93,8 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 md:p-10 rounded-2xl border-2 border-gray-200 shadow-lg">
-              <h2 className="text-3xl md:text-4xl font-black text-primary mb-8">
+            <div className="bg-gray-50 p-6 sm:p-8 md:p-10 rounded-2xl border-2 border-gray-200 shadow-lg">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-6 sm:mb-8">
                 Send Us a Message
               </h2>
 

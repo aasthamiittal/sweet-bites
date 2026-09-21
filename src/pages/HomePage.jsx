@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Package, Heart, Award } from 'lucide-react';
+import { ArrowRight, Sparkles, Package, Heart, Award, Globe } from 'lucide-react';
 import Button from '../components/ui/Button';
 import ProductCard from '../components/product/ProductCard';
 import { products, categories } from '../data/products';
@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="bg-white py-16 md:py-24 overflow-hidden relative"
+        className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden relative min-h-[500px] sm:min-h-[600px] flex items-center"
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
@@ -24,26 +24,25 @@ const HomePage = () => {
         }}
       >
         <div className="absolute inset-0 bg-white/40"></div>
-        <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container-custom relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-primary-lighter text-primary px-4 py-2 rounded-full mb-6 animate-scale-in">
+            <div className="text-center lg:text-left space-y-6">
+              <div className="inline-flex items-center gap-2 bg-primary-lighter text-primary px-4 py-2 rounded-full animate-scale-in">
                 <Sparkles size={16} />
                 <span className="text-sm font-semibold">New Arrivals Just Dropped!</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-primary leading-tight mb-6">
-                THE HAPPY<br />WAY TO<br />SNACK
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-primary leading-[1.1]">
+                THE HAPPY WAY TO SNACK
               </h1>
 
-              <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Little bites.<br />Big happiness.
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
+                Little bites. Big happiness.
               </p>
 
-              <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto lg:mx-0">
-                Discover premium candies and treats made with love, real ingredients,
-                and a whole lot of flavor.
+              <p className="text-base sm:text-lg text-gray-700 max-w-md mx-auto lg:mx-0 leading-relaxed">
+                Discover premium candies and treats made with love, real ingredients, and a whole lot of flavor.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -68,46 +67,46 @@ const HomePage = () => {
       </section>
 
       {/* Features Bar */}
-      <section className="bg-primary-lighter py-10">
+      <section className="bg-primary-lighter py-8 sm:py-10">
         <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                <Award size={24} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Award size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">Premium Quality</p>
-                <p className="text-xs text-gray-600">Finest ingredients</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                <Package size={24} />
-              </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">Fresh Quality</p>
-                <p className="text-xs text-gray-600">Always fresh</p>
+              <div className="min-w-0">
+                <p className="font-bold text-gray-900 text-xs sm:text-sm truncate">Premium Quality</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 truncate">Finest ingredients</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                <Heart size={24} />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Package size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">Made with Love</p>
-                <p className="text-xs text-gray-600">Real ingredients</p>
+              <div className="min-w-0">
+                <p className="font-bold text-gray-900 text-xs sm:text-sm truncate">Fresh Quality</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 truncate">Always fresh</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                <Sparkles size={24} />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Heart size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">Premium Taste</p>
-                <p className="text-xs text-gray-600">Unforgettable flavors</p>
+              <div className="min-w-0">
+                <p className="font-bold text-gray-900 text-xs sm:text-sm truncate">Made with Love</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 truncate">Real ingredients</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Globe size={20} className="sm:w-6 sm:h-6" />
+              </div>
+              <div className="min-w-0">
+                <p className="font-bold text-gray-900 text-xs sm:text-sm truncate">Worldwide Shipping</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 truncate">Ships globally</p>
               </div>
             </div>
           </div>
@@ -115,18 +114,18 @@ const HomePage = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
               Shop by Category
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               From chewy jellies to rich chocolates, find your perfect sweet treat
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
             {categories.map((category) => (
               <Link
                 key={category.id}
@@ -155,14 +154,14 @@ const HomePage = () => {
       </section>
 
       {/* Best Sellers Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-gray-50">
         <div className="container-custom">
-          <div className="flex items-center justify-between mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-12 md:mb-16">
+            <div className="space-y-2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
                 Best Sellers
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600">
                 Customer favorites you'll absolutely love
               </p>
             </div>
@@ -194,16 +193,15 @@ const HomePage = () => {
       </section>
 
       {/* Promotional Banner */}
-      <section className="py-20 md:py-28 bg-primary text-white overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-primary text-white overflow-hidden">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h2 className="text-4xl md:text-6xl font-black mb-6">
-                Sweet Deals<br />Every Week!
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
+                Sweet Deals Every Week!
               </h2>
-              <p className="text-xl mb-8 opacity-90">
-                Join our newsletter and get exclusive discounts, new product alerts,
-                and first access to limited editions.
+              <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed">
+                Join our newsletter and get exclusive discounts, new product alerts, and first access to limited editions.
               </p>
               <a href="#newsletter">
                 <Button variant="secondary" size="large">
@@ -223,14 +221,14 @@ const HomePage = () => {
       </section>
 
       {/* New Arrivals Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white">
         <div className="container-custom">
-          <div className="flex items-center justify-between mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-12 md:mb-16">
+            <div className="space-y-2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
                 New Arrivals
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600">
                 Fresh flavors just for you
               </p>
             </div>
@@ -252,16 +250,14 @@ const HomePage = () => {
       </section>
 
       {/* Brand Story Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-gray-50">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
               Sweet Moments, Made Simple
             </h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              At Sweet Bites, we believe life's best moments deserve the best treats.
-              That's why we craft every candy with premium ingredients, real fruit
-              flavors, and a whole lot of love. From our kitchen to your happy place.
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4">
+              At Sweet Bites, we believe life's best moments deserve the best treats. That's why we craft every candy with premium ingredients, real fruit flavors, and a whole lot of love. From our kitchen to your happy place.
             </p>
             <Link to="/our-story">
               <Button size="large" variant="outline">

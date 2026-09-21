@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import AccountPage from './pages/AccountPage';
+import CheckoutPage from './pages/CheckoutPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/collections/:handle" element={<CollectionPage />} />
               <Route path="/products/:slug" element={<ProductDetailPage />} />
               <Route path="/collections" element={<CollectionPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
 
               {/* Content Pages */}
               <Route path="/about" element={<AboutPage />} />

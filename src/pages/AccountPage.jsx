@@ -34,7 +34,7 @@ const AccountPage = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl md:text-5xl font-black text-primary mb-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-2">
                 My Account
               </h1>
               <p className="text-lg text-gray-700">
@@ -53,9 +53,29 @@ const AccountPage = () => {
       {/* Main Content */}
       <section className="py-12">
         <div className="container-custom">
+          {/* Mobile Tabs */}
+          <div className="lg:hidden mb-6 overflow-x-auto">
+            <div className="flex gap-2 pb-2">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold whitespace-nowrap transition-all ${
+                    activeTab === tab.id
+                      ? 'bg-primary text-white'
+                      : 'bg-white text-gray-700 border-2 border-gray-100'
+                  }`}
+                >
+                  <tab.icon size={18} />
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-4 gap-8">
-            {/* Sidebar Navigation */}
-            <div className="lg:col-span-1">
+            {/* Sidebar Navigation - Desktop Only */}
+            <div className="hidden lg:block lg:col-span-1">
               <div className="bg-white rounded-2xl border-2 border-gray-100 overflow-hidden">
                 <div className="p-6 bg-primary text-white">
                   <div className="flex items-center gap-3">
@@ -96,9 +116,9 @@ const AccountPage = () => {
             <div className="lg:col-span-3">
               {/* Profile Tab */}
               {activeTab === 'profile' && (
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-8">
-                  <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-3xl font-black text-primary">Profile Information</h2>
+                <div className="bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-6 md:p-8">
+                  <div className="flex items-center justify-between mb-6 sm:mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-black text-primary">Profile Information</h2>
                     {!isEditing ? (
                       <Button
                         variant="outline"
@@ -182,8 +202,8 @@ const AccountPage = () => {
 
               {/* Orders Tab */}
               {activeTab === 'orders' && (
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-8">
-                  <h2 className="text-3xl font-black text-primary mb-8">Order History</h2>
+                <div className="bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-6 md:p-8">
+                  <h2 className="text-2xl sm:text-3xl font-black text-primary mb-6 sm:mb-8">Order History</h2>
 
                   {orders.length === 0 ? (
                     <div className="text-center py-16">
@@ -211,8 +231,8 @@ const AccountPage = () => {
 
               {/* Favorites Tab */}
               {activeTab === 'favorites' && (
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-8">
-                  <h2 className="text-3xl font-black text-primary mb-8">My Favorites</h2>
+                <div className="bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-6 md:p-8">
+                  <h2 className="text-2xl sm:text-3xl font-black text-primary mb-6 sm:mb-8">My Favorites</h2>
 
                   {favorites.length === 0 ? (
                     <div className="text-center py-16">
@@ -237,9 +257,9 @@ const AccountPage = () => {
 
               {/* Addresses Tab */}
               {activeTab === 'addresses' && (
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-8">
-                  <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-3xl font-black text-primary">Saved Addresses</h2>
+                <div className="bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-6 md:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-black text-primary">Saved Addresses</h2>
                     <Button className="flex items-center gap-2">
                       <MapPin size={18} />
                       Add New Address
@@ -258,9 +278,9 @@ const AccountPage = () => {
 
               {/* Payment Tab */}
               {activeTab === 'payment' && (
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-8">
-                  <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-3xl font-black text-primary">Payment Methods</h2>
+                <div className="bg-white rounded-2xl border-2 border-gray-100 p-4 sm:p-6 md:p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-black text-primary">Payment Methods</h2>
                     <Button className="flex items-center gap-2">
                       <CreditCard size={18} />
                       Add Payment Method

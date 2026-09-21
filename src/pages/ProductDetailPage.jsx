@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Star, Heart, Minus, Plus, ShoppingCart, ChevronRight, Check } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
@@ -9,6 +9,7 @@ import { useCart } from '../context/CartContext';
 
 const ProductDetailPage = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const product = products.find((p) => p.slug === slug);
   const { addToCart, openCart } = useCart();
 
@@ -44,8 +45,7 @@ const ProductDetailPage = () => {
   const handleBuyNow = () => {
     const variant = product.variants[selectedVariant];
     addToCart(product, variant, quantity);
-    // In a real app, this would redirect to checkout
-    alert('Proceeding to checkout...');
+    navigate('/checkout');
   };
 
   return (
@@ -71,8 +71,8 @@ const ProductDetailPage = () => {
       </div>
 
       {/* Product Section */}
-      <div className="container-custom py-12">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="container-custom py-8 sm:py-12 lg:pb-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left - Images */}
           <div>
             {/* Main Image */}
@@ -90,7 +90,7 @@ const ProductDetailPage = () => {
             </div>
 
             {/* Thumbnail Gallery */}
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-4 gap-3 sm:gap-4 md:gap-6">
               {product.images.map((image, index) => (
                 <button
                   key={index}
@@ -126,7 +126,7 @@ const ProductDetailPage = () => {
             </div>
 
             {/* Product Name */}
-            <h1 className="text-4xl font-black text-gray-900 mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-4">
               {product.name}
             </h1>
 
@@ -151,13 +151,13 @@ const ProductDetailPage = () => {
             </div>
 
             {/* Price */}
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-5xl font-black text-primary">
+            <div className="flex items-center gap-3 sm:gap-4 mb-6">
+              <span className="text-3xl sm:text-4xl md:text-5xl font-black text-primary">
                 ${product.variants[selectedVariant].price.toFixed(2)}
               </span>
               {product.variants[selectedVariant].originalPrice >
                 product.variants[selectedVariant].price && (
-                <span className="text-2xl text-gray-500 line-through">
+                <span className="text-xl sm:text-2xl text-gray-500 line-through">
                   ${product.variants[selectedVariant].originalPrice.toFixed(2)}
                 </span>
               )}
@@ -262,6 +262,12 @@ const ProductDetailPage = () => {
                 <div className="flex items-center gap-3">
                   <Check size={18} className="text-primary" />
                   <span className="text-sm text-gray-700">
+                    Worldwide shipping available
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check size={18} className="text-primary" />
+                  <span className="text-sm text-gray-700">
                     Made with real fruit ingredients
                   </span>
                 </div>
@@ -283,14 +289,14 @@ const ProductDetailPage = () => {
         </div>
 
         {/* Product Details Tabs */}
-        <div className="mt-20">
-          <div className="border-b-2 border-gray-200 mb-10">
-            <div className="flex gap-8">
+        <div className="mt-12 sm:mt-16 lg:mt-20">
+          <div className="border-b-2 border-gray-200 mb-6 sm:mb-8 lg:mb-10 overflow-x-auto">
+            <div className="flex gap-4 sm:gap-6 lg:gap-8 min-w-max sm:min-w-0">
               {['description', 'ingredients', 'nutrition', 'reviews'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`pb-4 px-2 font-bold capitalize transition-colors relative ${
+                  className={`pb-3 sm:pb-4 px-3 sm:px-4 font-bold capitalize transition-colors relative whitespace-nowrap text-sm sm:text-base ${
                     activeTab === tab
                       ? 'text-primary'
                       : 'text-gray-600 hover:text-gray-900'
@@ -348,8 +354,8 @@ const ProductDetailPage = () => {
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
-          <div className="mt-24">
-            <h2 className="text-4xl font-black text-primary mb-10">
+          <div className="mt-16 sm:mt-24">
+            <h2 className="text-3xl sm:text-4xl font-black text-primary mb-8 sm:mb-10">
               You Might Also Like
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -362,11 +368,11 @@ const ProductDetailPage = () => {
       </div>
 
       {/* Sticky Add to Cart - Mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 z-20 shadow-2xl">
-        <div className="flex items-center gap-4">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border p-3 sm:p-4 z-20 shadow-2xl">
+        <div className="flex items-center gap-3 sm:gap-4">
           <div>
             <p className="text-xs text-gray-600">Price</p>
-            <p className="text-2xl font-bold text-primary">
+            <p className="text-xl sm:text-2xl font-bold text-primary">
               ${product.variants[selectedVariant].price.toFixed(2)}
             </p>
           </div>

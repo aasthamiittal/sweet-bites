@@ -10,11 +10,11 @@ const FAQPage = () => {
       questions: [
         {
           q: 'What is your shipping policy?',
-          a: 'Orders typically ship within 1-2 business days and arrive within 3-5 business days for standard shipping. Shipping costs are calculated at checkout based on your location and order size. Expedited shipping options are available at checkout.',
+          a: 'We ship worldwide! Orders typically ship within 1-2 business days. Domestic orders arrive within 3-5 business days, while international shipping times vary by destination (7-14 business days). Shipping costs are calculated at checkout based on your location and order size. Expedited shipping options are available at checkout.',
         },
         {
           q: 'Do you ship internationally?',
-          a: 'Currently, we only ship within the United States. We are working on expanding our international shipping options and will update our customers when available.',
+          a: 'Yes! We proudly ship Sweet Bites products worldwide. International customers can enjoy our premium candies and treats with reliable shipping to most countries. Shipping times and costs vary by destination and will be calculated at checkout.',
         },
         {
           q: 'How can I track my order?',
@@ -97,7 +97,7 @@ const FAQPage = () => {
       {/* Hero Section */}
       <section className="bg-primary-lighter py-20">
         <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-black text-primary mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6">
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -110,8 +110,8 @@ const FAQPage = () => {
       <section className="py-24">
         <div className="container-custom max-w-4xl">
           {faqs.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-black text-primary mb-8">
+            <div key={categoryIndex} className="mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-6 sm:mb-8">
                 {category.category}
               </h2>
               <div className="space-y-6">
@@ -155,7 +155,7 @@ const FAQPage = () => {
       {/* Contact CTA */}
       <section className="py-24 bg-primary-lighter">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-black text-primary mb-4">
+          <h2 className="text-2xl sm:text-3xl font-black text-primary mb-4">
             Still Have Questions?
           </h2>
           <p className="text-lg text-gray-700 mb-6">

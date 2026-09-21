@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Heart, Award, Sparkles, Users, Target, Leaf } from 'lucide-react';
 import Button from '../components/ui/Button';
-import heroImg from '../assets/hero.png';
 import jellyImg from '../assets/products/jelly.png';
 import truffleBox from '../assets/products/Assorted-truffle-box.png';
 import mixedBerry from '../assets/products/Mixed Berry Bliss.png';
@@ -12,7 +11,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="bg-primary-lighter py-20">
         <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-black text-primary mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-6">
             About Sweet Bites
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -26,7 +25,7 @@ const AboutPage = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-black text-primary mb-6">Our Story</h2>
+              <h2 className="text-3xl sm:text-4xl font-black text-primary mb-6">Our Story</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                 Sweet Bites was born from a simple belief: life's sweetest moments deserve the finest treats. What started as a small kitchen experiment in 2020 has grown into a beloved brand dedicated to creating premium candies and confections that bring joy to every occasion.
               </p>
@@ -96,7 +95,7 @@ const AboutPage = () => {
       {/* Values Section */}
       <section className="py-24 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-4xl md:text-5xl font-black text-primary text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary text-center mb-12 sm:mb-16">
             What We Stand For
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,8 +165,8 @@ const AboutPage = () => {
       {/* Product Showcase Section */}
       <section className="py-24 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4">
               Taste the Difference
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">

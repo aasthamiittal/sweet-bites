@@ -9,19 +9,19 @@ const Button = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'font-semibold transition-all duration-300 flex items-center justify-center gap-2';
+  const baseStyles = 'font-semibold transition-all duration-200 flex items-center justify-center gap-2 rounded-xl touch-manipulation';
 
   const variants = {
-    primary: 'bg-primary text-white hover:bg-primary-dark active:scale-95',
-    secondary: 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white',
+    primary: 'bg-primary text-white hover:bg-primary-dark active:scale-95 shadow-sm hover:shadow-md',
+    secondary: 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white shadow-sm',
     outline: 'bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white',
     text: 'bg-transparent text-primary hover:text-primary-dark',
   };
 
   const sizes = {
-    small: 'px-4 py-2 text-sm',
-    medium: 'px-6 py-3 text-base',
-    large: 'px-8 py-4 text-lg',
+    small: 'px-4 py-2.5 text-sm min-h-[40px]',
+    medium: 'px-6 py-3 text-base min-h-[44px]',
+    large: 'px-8 py-4 text-lg min-h-[48px]',
   };
 
   const widthClass = fullWidth ? 'w-full' : '';

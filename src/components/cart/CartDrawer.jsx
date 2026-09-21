@@ -1,9 +1,10 @@
 import { X, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import Button from '../ui/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CartDrawer = () => {
+  const navigate = useNavigate();
   const {
     cartItems,
     isCartOpen,
@@ -14,6 +15,11 @@ const CartDrawer = () => {
   } = useCart();
 
   const total = getCartTotal();
+
+  const handleCheckout = () => {
+    closeCart();
+    navigate('/checkout');
+  };
 
   if (!isCartOpen) return null;
 
@@ -26,13 +32,13 @@ const CartDrawer = () => {
       />
 
       {/* Drawer */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col animate-slide-in-right">
+      <div className="fixed right-0 top-0 h-full w-full sm:max-w-md bg-white shadow-2xl z-50 flex flex-col animate-slide-in-right">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border">
-          <div className="flex items-center gap-3">
-            <ShoppingBag size={24} className="text-primary" />
-            <h2 className="text-2xl font-bold text-gray-900">
-              Your Cart ({cartItems.length})
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-border">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <ShoppingBag size={20} className="text-primary sm:w-6 sm:h-6" />
+            <h2 className="text-lg sm:text-2xl font-bold text-gray-900">
+              Cart ({cartItems.length})
             </h2>
           </div>
           <button
@@ -44,7 +50,7 @@ const CartDrawer = () => {
         </div>
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6">
           {cartItems.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
               <ShoppingBag size={64} className="text-gray-300 mb-4" />
@@ -141,16 +147,16 @@ const CartDrawer = () => {
 
         {/* Footer */}
         {cartItems.length > 0 && (
-          <div className="border-t border-border p-6 bg-gray-50">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-lg font-semibold text-gray-900">
+          <div className="border-t border-border p-4 sm:p-6 bg-gray-50">
+            <div className="flex items-center justify-between mb-4 sm:mb-6">
+              <span className="text-base sm:text-lg font-semibold text-gray-900">
                 Subtotal:
               </span>
-              <span className="text-3xl font-bold text-primary">
+              <span className="text-2xl sm:text-3xl font-bold text-primary">
                 ${total.toFixed(2)}
               </span>
             </div>
-            <Button fullWidth size="large" className="mb-3">
+            <Button fullWidth size="large" className="mb-3" onClick={handleCheckout}>
               Proceed to Checkout
             </Button>
             <button
